@@ -1,0 +1,59 @@
+{{define "New"}}
+
+{{ template "_head" }}
+
+<body>
+  
+  {{ template "_menu" }}
+
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-5">Novo produto</h1>
+        <p class="lead">Insira os detalhes</p>
+      </div>
+    </div>
+    <form action="insert" method="post">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" name="nome">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="form-group">
+            <label for="descricao">Descrição:</label>
+            <input type="text" class="form-control" name="descricao">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="preco">Preço:</label>
+            <input type="number" class="form-control" name="preco" step="0.01">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" class="form-control" name="quantidade" step="1">
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-success" type="submit" value="salvar">
+        Salvar
+      </button>
+      <a href="/" class="btn btn-info">Voltar</a>
+
+    </form>
+  </div>
+</body>
+
+</html>
+{{end}}
